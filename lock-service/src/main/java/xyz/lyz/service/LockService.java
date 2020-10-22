@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class LockService {
 
-    @RedisLock()
+    @RedisLock(key = "lyz")
     public String serviceTest() {
         return "hello lock !";
     }
