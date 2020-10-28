@@ -12,6 +12,9 @@
     <version>1.0.0-SNAPSHOT</version>
     <description>Demo project for Spring Boot</description>
 
+    <properties>
+        <labrador-cloud-cache>1.0.1</labrador-cloud-cache>
+    </properties>
 
     <dependencies>
 
@@ -26,8 +29,10 @@
         <dependency>
             <groupId>net.bestjoy</groupId>
             <artifactId>labrador-cloud-cache</artifactId>
-            <version>1.0.0</version>
+            <version>${labrador-cloud-cache}</version>
         </dependency>
+
+
 
     </dependencies>
 

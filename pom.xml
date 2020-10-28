@@ -3,10 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.4.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>net.bestjoy</groupId>
+        <artifactId>labrador-cloud-framework</artifactId>
+        <version>1.0.0</version>
     </parent>
 
 
@@ -24,6 +23,7 @@
         <spring-boot-autoconfigure>2.3.4.RELEASE</spring-boot-autoconfigure>
         <spring-boot-devtools>2.3.4.RELEASE</spring-boot-devtools>
         <spring-boot-starter-web>2.3.4.RELEASE</spring-boot-starter-web>
+        <labrador.cloud.version>1.0.0</labrador.cloud.version>
     </properties>
 
     <modules>
@@ -31,30 +31,45 @@
         <module>lock-service</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>net.bestjoy</groupId>
+            <artifactId>labrador-cloud-discovery</artifactId>
+            <version>${labrador.cloud.version}</version>
+        </dependency>
 
-    <dependencyManagement>
-        <dependencies>
+        <dependency>
+            <groupId>net.bestjoy</groupId>
+            <artifactId>labrador-cloud-web</artifactId>
+            <version>${labrador.cloud.version}</version>
+        </dependency>
 
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-devtools</artifactId>
-                <version>${spring-boot-devtools}</version>
-                <optional>true</optional>
-            </dependency>
+    </dependencies>
 
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>${spring-boot-starter-web}</version>
-            </dependency>
 
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version>
-                <optional>true</optional>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+<!--    <dependencyManagement>-->
+<!--        <dependencies>-->
+
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-devtools</artifactId>-->
+<!--                <version>${spring-boot-devtools}</version>-->
+<!--                <optional>true</optional>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-starter-web</artifactId>-->
+<!--                <version>${spring-boot-starter-web}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>org.projectlombok</groupId>-->
+<!--                <artifactId>lombok</artifactId>-->
+<!--                <version>${lombok.version}</version>-->
+<!--                <optional>true</optional>-->
+<!--            </dependency>-->
+<!--        </dependencies>-->
+<!--    </dependencyManagement>-->
 
 </project>

@@ -23,17 +23,9 @@ public class BaseTest {
     @Autowired
     public WebApplicationContext webApplicationContext;
 
-    /**
-     * 所有测试方法执行之前执行该方法
-     */
-    @Before
-    public void before() {
-        //获取mockmvc对象实例
-        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
-    }
-
-
     public  void quickCreateForJson(HttpMethod httpMethod, String url, String str) throws Exception {
+
+        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
 
         //判断请求方式
         MockHttpServletRequestBuilder mockHttpServletRequestBuilder;

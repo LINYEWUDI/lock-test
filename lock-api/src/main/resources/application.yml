@@ -1,2 +1,35 @@
 server:
   port: 8080
+spring:
+  #  redis:
+  #    host: 61.183.144.174
+  #    port: 26379
+  #    timeout: 3s
+  #    database: 5
+  #    password: bjcs#Test123
+  redis:
+    host: r-2vcojuwwj9m6ccd1x6pd.redis.cn-chengdu.rds.aliyuncs.com
+    port: 6379
+    timeout: 3s
+    database: 6
+    password: DCone7888#
+    jedis:
+      pool:
+        max-idle: 500
+        min-idle: 50
+        max-wait: 2s
+        max-active: 1000
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    username: dcone
+    password: DCone7888#
+    url: jdbc:mysql://rm-2vcml78389g32906ego.mysql.cn-chengdu.rds.aliyuncs.com:3306/vehicle_management_platform?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&rewriteBatchedStatements=true&socketTimeout=30000&connectTimeout=3000
+    hikari:
+      maximum-pool-size: 100
+      minimum-idle: 20
+      data-source-properties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true

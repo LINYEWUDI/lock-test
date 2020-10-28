@@ -1,5 +1,6 @@
 package xyz.lyz.lockapi.controller;
 
+import net.bestjoy.cloud.cache.RedisLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +17,8 @@ public class TestController {
 
 
     @GetMapping("show")
-    public String saveAcceptanceResult() {
-        return lockService.serviceTest();
+    public void saveAcceptanceResult() {
+        System.out.println("hello lock !");
     }
+
 }
